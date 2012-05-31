@@ -38,7 +38,6 @@ END_MESSAGE_MAP()
 void SButton::OnClicked() 
 {
 	// TODO: Add your control notification handler code here
-	is_pressed=!is_pressed;
 }
 
 void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) 
@@ -64,6 +63,10 @@ void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	// Draw the background
 	CDC *cdc=CDC::FromHandle(lpDrawItemStruct->hDC);
 	CRect rect(lpDrawItemStruct->rcItem);
+	UINT nState = lpDrawItemStruct->itemState;
+	if( nState & ODS_SELECTED ){
+		is_pressed=!is_pressed;
+	}
 	if(is_pressed)
 		cdc->FillSolidRect(0,0,rect.right,rect.bottom,RGB(0,255,0));
 	else
@@ -82,6 +85,6 @@ BOOL SButton::OnEraseBkgnd(CDC* pDC)
 {
 	// TODO: Add your message handler code here and/or call default
 	
-	return TRUE;
-	//return CButton::OnEraseBkgnd(pDC);
+	//return TRUE;
+	return CButton::OnEraseBkgnd(pDC);
 }
