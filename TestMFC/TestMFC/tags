@@ -1,0 +1,62 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AFX_DIALOG_H__5CDB29CA_D181_442E_A350_0AD189177E76__INCLUDED_	.\dialog.h	2;"	d
+AFX_SBUTTON_H__A62303AC_10DB_4148_A529_F764BCC0F94D__INCLUDED_	.\SButton.h	2;"	d
+AFX_STDAFX_H__A5D2857B_2052_4F6A_AB34_462BFDAE822A__INCLUDED_	.\StdAfx.h	7;"	d
+AFX_TESTMFCDLG_H__F689BEB1_A212_4CF0_832B_111438C263DE__INCLUDED_	.\TestMFCDlg.h	5;"	d
+AFX_TESTMFC_H__25664E5C_9740_45DF_977E_E29A0F364384__INCLUDED_	.\TestMFC.h	5;"	d
+CTestMFCApp	.\TestMFC.cpp	/^CTestMFCApp::CTestMFCApp()$/;"	f	class:CTestMFCApp
+CTestMFCApp	.\TestMFC.h	/^class CTestMFCApp : public CWinApp$/;"	c
+CTestMFCDlg	.\TestMFCDlg.cpp	/^CTestMFCDlg::CTestMFCDlg(CWnd* pParent \/*=NULL*\/)$/;"	f	class:CTestMFCDlg
+CTestMFCDlg	.\TestMFCDlg.h	/^class CTestMFCDlg : public CDialog$/;"	c
+DoDataExchange	.\TestMFCDlg.cpp	/^void CTestMFCDlg::DoDataExchange(CDataExchange* pDX)$/;"	f	class:CTestMFCDlg
+DoDataExchange	.\dialog.cpp	/^void dialog::DoDataExchange(CDataExchange* pDX)$/;"	f	class:dialog
+DrawItem	.\SButton.cpp	/^void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) $/;"	f	class:SButton
+IDB_BITMAP1	.\resource.h	8;"	d
+IDB_BITMAP3	.\resource.h	9;"	d
+IDC_BUTTON1	.\resource.h	10;"	d
+IDD	.\TestMFCDlg.h	/^	enum { IDD = IDD_TESTMFC_DIALOG };$/;"	e	enum:CTestMFCDlg::__anon2
+IDD	.\dialog.h	/^	enum { IDD = IDD_DIALOG1 };$/;"	e	enum:dialog::__anon1
+IDD_DIALOG1	.\resource.h	7;"	d
+IDD_TESTMFC_DIALOG	.\resource.h	5;"	d
+IDR_MAINFRAME	.\resource.h	6;"	d
+InitInstance	.\TestMFC.cpp	/^BOOL CTestMFCApp::InitInstance()$/;"	f	class:CTestMFCApp
+OnButton1	.\TestMFCDlg.cpp	/^void CTestMFCDlg::OnButton1() $/;"	f	class:CTestMFCDlg
+OnClicked	.\SButton.cpp	/^void SButton::OnClicked() $/;"	f	class:SButton
+OnEraseBkgnd	.\SButton.cpp	/^BOOL SButton::OnEraseBkgnd(CDC* pDC) $/;"	f	class:SButton
+OnEraseBkgnd	.\TestMFCDlg.cpp	/^BOOL CTestMFCDlg::OnEraseBkgnd(CDC* pDC) $/;"	f	class:CTestMFCDlg
+OnInitDialog	.\TestMFCDlg.cpp	/^BOOL CTestMFCDlg::OnInitDialog()$/;"	f	class:CTestMFCDlg
+OnLButtonDblClk	.\TestMFCDlg.cpp	/^void CTestMFCDlg::OnLButtonDblClk(UINT nFlags, CPoint point) $/;"	f	class:CTestMFCDlg
+OnPaint	.\TestMFCDlg.cpp	/^void CTestMFCDlg::OnPaint() $/;"	f	class:CTestMFCDlg
+OnQueryDragIcon	.\TestMFCDlg.cpp	/^HCURSOR CTestMFCDlg::OnQueryDragIcon()$/;"	f	class:CTestMFCDlg
+OnSize	.\TestMFCDlg.cpp	/^void CTestMFCDlg::OnSize(UINT nType, int cx, int cy) $/;"	f	class:CTestMFCDlg
+SButton	.\SButton.cpp	/^SButton::SButton()$/;"	f	class:SButton
+SButton	.\SButton.h	/^class SButton : public CButton$/;"	c
+THIS_FILE	.\SButton.cpp	/^static char THIS_FILE[] = __FILE__;$/;"	v	file:
+THIS_FILE	.\SButton.cpp	10;"	d	file:
+THIS_FILE	.\TestMFC.cpp	/^static char THIS_FILE[] = __FILE__;$/;"	v	file:
+THIS_FILE	.\TestMFC.cpp	10;"	d	file:
+THIS_FILE	.\TestMFCDlg.cpp	/^static char THIS_FILE[] = __FILE__;$/;"	v	file:
+THIS_FILE	.\TestMFCDlg.cpp	11;"	d	file:
+THIS_FILE	.\dialog.cpp	/^static char THIS_FILE[] = __FILE__;$/;"	v	file:
+THIS_FILE	.\dialog.cpp	10;"	d	file:
+VC_EXTRALEAN	.\StdAfx.h	13;"	d
+_APS_NEXT_COMMAND_VALUE	.\resource.h	17;"	d
+_APS_NEXT_CONTROL_VALUE	.\resource.h	18;"	d
+_APS_NEXT_RESOURCE_VALUE	.\resource.h	16;"	d
+_APS_NEXT_SYMED_VALUE	.\resource.h	19;"	d
+dialog	.\dialog.cpp	/^dialog::dialog(CWnd* pParent \/*=NULL*\/)$/;"	f	class:dialog
+dialog	.\dialog.h	/^class dialog : public CDialog$/;"	c
+is_pressed	.\SButton.h	/^	bool is_pressed;$/;"	m	class:SButton
+m_hIcon	.\TestMFCDlg.h	/^	HICON m_hIcon;$/;"	m	class:CTestMFCDlg
+my_button	.\TestMFCDlg.h	/^	SButton my_button;$/;"	m	class:CTestMFCDlg
+new	.\SButton.cpp	9;"	d	file:
+new	.\TestMFC.cpp	9;"	d	file:
+new	.\TestMFCDlg.cpp	10;"	d	file:
+new	.\dialog.cpp	9;"	d	file:
+theApp	.\TestMFC.cpp	/^CTestMFCApp theApp;$/;"	v
+~SButton	.\SButton.cpp	/^SButton::~SButton()$/;"	f	class:SButton
