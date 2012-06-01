@@ -37,12 +37,13 @@ BEGIN_MESSAGE_MAP(CTestMFCDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_WM_LBUTTONDBLCLK()
-	ON_BN_CLICKED(IDC_BUTTON1, OnButton1)
+	//ON_BN_CLICKED(IDC_BUTTON1, OnButton1)
 	ON_WM_SIZE()
+	ON_WM_ERASEBKGND()
 	ON_WM_CAPTURECHANGED()
 	ON_WM_CANCELMODE()
 	ON_WM_CHAR()
-	ON_WM_ERASEBKGND()
+	ON_COMMAND(IDCLOSE, OnClose)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -103,6 +104,7 @@ void CTestMFCDlg::OnPaint()
 	CBrush brush;
 	brush.CreatePatternBrush(&bmp);
 
+	//GetClientRect(rect);
 	GetClientRect(rect);
 	dc.StretchBlt(0,0,rect.right,rect.bottom,&cdc,0,0,bmpinfo.bmWidth,bmpinfo.bmHeight,SRCCOPY);
 	//dc.FillRect(CRect(0,0,rect.right/2,rect.bottom/2),&brush);
@@ -160,4 +162,11 @@ BOOL CTestMFCDlg::OnEraseBkgnd(CDC* pDC)
 
 	return TRUE;
 	//return CDialog::OnEraseBkgnd(pDC);
+}
+
+void CTestMFCDlg::OnClose() 
+{
+	// TODO: Add your command handler code here
+	MessageBox(_T("the button menu is actived."));
+	CDialog::OnCancel();
 }

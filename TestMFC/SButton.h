@@ -38,6 +38,7 @@ protected:
 	//{{AFX_MSG(SButton)
 	afx_msg void OnClicked();
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnClose();
 	//}}AFX_MSG
 
 	DECLARE_MESSAGE_MAP()

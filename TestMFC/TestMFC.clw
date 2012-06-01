@@ -2,7 +2,7 @@
 
 [General Info]
 Version=1
-LastClass=SButton
+LastClass=CTestMFCDlg
 LastTemplate=CButton
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "TestMFC.h"
@@ -11,12 +11,13 @@ ClassCount=4
 Class1=CTestMFCApp
 Class2=CTestMFCDlg
 
-ResourceCount=3
+ResourceCount=4
 Resource1=IDR_MAINFRAME
 Class3=dialog
-Resource2=IDD_DIALOG1
+Resource2=IDD_TESTMFC_DIALOG
 Class4=SButton
-Resource3=IDD_TESTMFC_DIALOG
+Resource3=IDD_DIALOG1
+Resource4=IDR_MENU1
 
 [CLS:CTestMFCApp]
 Type=0
@@ -31,7 +32,7 @@ ImplementationFile=TestMFCDlg.cpp
 Filter=W
 BaseClass=CDialog
 VirtualFilter=dWC
-LastObject=CTestMFCDlg
+LastObject=IDCLOSE
 
 
 
@@ -62,5 +63,12 @@ ImplementationFile=SButton.cpp
 BaseClass=CButton
 Filter=W
 VirtualFilter=BWC
-LastObject=IDC_BUTTON1
+LastObject=AFX_ID_PREVIEW_CLOSE
+
+[MNU:IDR_MENU1]
+Type=1
+Class=CTestMFCDlg
+Command1=ID_MENUITEM32771
+Command2=IDCLOSE
+CommandCount=2
 

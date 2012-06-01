@@ -169,6 +169,35 @@ END
 
 IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
 IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\background.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "menu", MENUBARBREAK
+    BEGIN
+        POPUP "submenu"
+        BEGIN
+            MENUITEM "submenu 2?",                  ID_MENUITEM32771
+        END
+        MENUITEM "close",                       IDCLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "close this dialog when clicked"
+END
+
 #endif    // Chinese (ÖÐ¹ú) resources
 /////////////////////////////////////////////////////////////////////////////
 

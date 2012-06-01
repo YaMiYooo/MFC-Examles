@@ -29,6 +29,7 @@ BEGIN_MESSAGE_MAP(SButton, CButton)
 	ON_CONTROL_REFLECT(BN_CLICKED, OnClicked)
 	ON_WM_ERASEBKGND()
 	ON_WM_PAINT()
+	ON_COMMAND(IDCLOSE, OnClose)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -38,6 +39,13 @@ END_MESSAGE_MAP()
 void SButton::OnClicked() 
 {
 	// TODO: Add your control notification handler code here
+	CMenu menu;
+	menu.LoadMenu(IDR_MENU1);
+
+	CMenu *popup_menu=menu.GetSubMenu(0);
+	CRect menu_rect;
+	GetWindowRect(menu_rect);
+	popup_menu->TrackPopupMenu(TPM_LEFTALIGN,menu_rect.left,menu_rect.bottom,this);
 }
 
 void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) 
@@ -78,7 +86,7 @@ void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	::DrawText(lpDrawItemStruct->hDC, strText, strText.GetLength(), 
 		&lpDrawItemStruct->rcItem, DT_SINGLELINE|DT_VCENTER|DT_CENTER);
 	::SetTextColor(lpDrawItemStruct->hDC, crOldColor);
-
+	ReleaseDC(cdc);
 }
 
 BOOL SButton::OnEraseBkgnd(CDC* pDC) 
@@ -87,4 +95,11 @@ BOOL SButton::OnEraseBkgnd(CDC* pDC)
 	
 	//return TRUE;
 	return CButton::OnEraseBkgnd(pDC);
+}
+
+void SButton::OnClose() 
+{
+	// TODO: Add your command handler code here
+	//PostQuitMessage(WM_QUIT);
+	MessageBox(_T("close menu is actived."));
 }

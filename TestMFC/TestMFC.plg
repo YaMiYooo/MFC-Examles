@@ -6,23 +6,23 @@
 --------------------Configuration: TestMFC - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPCA05.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP860A.tmp" with contents
 [
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/TestMFC.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/TestMFC.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "F:\workspace\MFC\TestMFC\SButton.cpp"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPCA05.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPCA06.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP860A.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP860B.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/TestMFC.pdb" /debug /machine:I386 /out:"Debug/TestMFC.exe" /pdbtype:sept 
-.\Debug\TestMFC.obj
-.\Debug\TestMFCDlg.obj
-.\Debug\StdAfx.obj
-.\Debug\TestMFC.res
 .\Debug\dialog.obj
 .\Debug\SButton.obj
+.\Debug\StdAfx.obj
+.\Debug\TestMFC.obj
+.\Debug\TestMFCDlg.obj
+.\Debug\TestMFC.res
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPCA06.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP860B.tmp"
 <h3>Output Window</h3>
 Compiling...
 SButton.cpp
