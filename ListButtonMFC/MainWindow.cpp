@@ -37,6 +37,30 @@ int MainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 	// TODO: Add your specialized creation code here
 	
+	CRect rect;
+	CRect client;
+	this->GetWindowRect(rect);
+	GetParent()->GetWindowRect(client);
+	m_pUpButton=new PButton(1);
+	//m_pUpButton=new CButton;
+	m_pUpButton->Create(_T(""),WS_CHILD|WS_VISIBLE|BS_PUSHBUTTON|BS_OWNERDRAW,CRect(0,0,rect.Width(),23),this,1);
+	//m_pUpButton->BringWindowToTop();
+	//m_pUpButton->SetWindowPos(&CWnd::wndTopMost,0,0,0,0,SWP_NOSIZE|SWP_NOMOVE);
+	//m_pUpButton->Invalidate(TRUE);
+	m_pUpButton->ShowWindow(SW_HIDE);
+	m_pDownButton=new PButton(0);
+	int height=rect.Height()-client.Height();
+	if(height<0)
+		height=rect.Height();
+	else
+		height=client.Height();
+	m_pDownButton->Create(_T(""),WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON|BS_OWNERDRAW,CRect(0,height-60,rect.Width(),height-38),this,0);
+	//m_pDownButton->BringWindowToTop();
+	//m_pDownButton->Invalidate(TRUE);
+	if(rect.Height()-client.Height()<0)
+		m_pDownButton->ShowWindow(SW_HIDE);
+	
+
 	int x,y;
 	int b;
 	x=10;
@@ -47,7 +71,7 @@ int MainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		CString a;
 		a.Format("%d",i+1);
 		buttons[i]=new SButton(n,a);
-		b=buttons[i]->Create(_T("button"),WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON|BS_OWNERDRAW,CRect(x,y,x+70,y+30),this,(LONG)&buttons[i]);
+		b=buttons[i]->Create(_T("button"),WS_CHILD|WS_VISIBLE|WS_CLIPSIBLINGS|BS_OWNERDRAW,CRect(x,y,x+70,y+30),this,(LONG)&buttons[i]);
 		
 		buttons[i]->SetWindowText(a);
 		if(b)
@@ -58,30 +82,6 @@ int MainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		}
 		y+=25;
 	}
-
-	CRect rect;
-	CRect client;
-	this->GetWindowRect(rect);
-	GetParent()->GetWindowRect(client);
-	m_pUpButton=new PButton(1);
-	//m_pUpButton=new CButton;
-	m_pUpButton->Create(_T(""),WS_CHILD|WS_VISIBLE|BS_PUSHBUTTON|BS_OWNERDRAW,CRect(0,0,rect.Width(),23),this,1);
-	//m_pUpButton->BringWindowToTop();
-	m_pUpButton->Invalidate(TRUE);
-	m_pUpButton->ShowWindow(SW_HIDE);
-	m_pDownButton=new PButton(0);
-	//m_pDownButton=new CButton
-	int height=rect.Height()-client.Height();
-	if(height<0)
-		height=rect.Height();
-	else
-		height=client.Height();
-	m_pDownButton->Create(_T(""),WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON|BS_OWNERDRAW,CRect(0,height-60,rect.Width(),height-38),this,0);
-	//m_pDownButton->BringWindowToTop();
-	m_pDownButton->Invalidate(TRUE);
-	if(rect.Height()-client.Height()<0)
-		m_pDownButton->ShowWindow(SW_HIDE);
-
 	return 0;
 }
 
