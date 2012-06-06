@@ -7,8 +7,9 @@
 // MainWindow.h : header file
 //
 #include "SButton.h"
+#include "PButton.h"
 
-#define BUTTON_NUMBER 30
+#define BUTTON_NUMBER 20
 /////////////////////////////////////////////////////////////////////////////
 // MainWindow window
 
@@ -29,10 +30,13 @@ public:
 	//{{AFX_VIRTUAL(MainWindow)
 	protected:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+	virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
 	//}}AFX_VIRTUAL
 
 // Implementation
 public:
+	void GoToBottom();
+	void GoToTop();
 	virtual ~MainWindow();
 
 	// Generated message map functions
@@ -43,6 +47,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 	SButton *buttons[BUTTON_NUMBER];
+	PButton *m_pUpButton;
+	PButton *m_pDownButton;
 };
 
 /////////////////////////////////////////////////////////////////////////////

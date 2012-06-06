@@ -45,6 +45,7 @@ SButton::~SButton()
 BEGIN_MESSAGE_MAP(SButton, CButton)
 	//{{AFX_MSG_MAP(SButton)
 	ON_CONTROL_REFLECT(BN_CLICKED, OnClicked)
+	ON_WM_ERASEBKGND()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -78,4 +79,53 @@ void SButton::OnClicked()
 	ShowWindow(SW_HIDE);
 	GetParent()->GetParent()->Invalidate(TRUE);
 	*/
+}
+
+void SButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct) 
+{
+	// TODO: Add your code to draw the specified item
+	UINT uStyle = DFCS_BUTTONPUSH;
+	
+	// This code only works with buttons.
+	ASSERT(lpDrawItemStruct->CtlType == ODT_BUTTON);
+	
+	// If drawing selected, add the pushed style to DrawFrameControl.
+	if (lpDrawItemStruct->itemState & ODS_SELECTED)
+		uStyle |= DFCS_PUSHED;
+	
+	// Draw the button frame.
+	::DrawFrameControl(lpDrawItemStruct->hDC, &lpDrawItemStruct->rcItem, 
+		DFC_BUTTON, uStyle);
+	
+	// Get the button's text.
+	CString strText;
+	GetWindowText(strText);
+	
+	// Draw the background
+	CDC *cdc=CDC::FromHandle(lpDrawItemStruct->hDC);
+	CRect rect(lpDrawItemStruct->rcItem);
+	UINT nState = lpDrawItemStruct->itemState;
+	cdc->FillSolidRect(0,0,rect.right,rect.bottom,RGB(0,255,0));
+	
+	CPen pen;
+	pen.CreatePen(PS_SOLID,1,RGB(0,0,0));
+	cdc->SelectObject(pen);
+	CBrush brush(RGB(0,255,0));
+	cdc->SelectObject(brush);
+	cdc->Rectangle(rect);
+	//delete cdc;
+	cdc->SetBkColor(RGB(0,255,0));
+	// Draw the button text using the text color red.
+	COLORREF crOldColor = ::SetTextColor(lpDrawItemStruct->hDC, RGB(255,0,0));
+	::DrawText(lpDrawItemStruct->hDC, strText, strText.GetLength(), 
+		&lpDrawItemStruct->rcItem, DT_SINGLELINE|DT_VCENTER|DT_CENTER);
+	::SetTextColor(lpDrawItemStruct->hDC, crOldColor);
+	//GetParent()->GetParent()->Invalidate(TRUE);
+}
+
+BOOL SButton::OnEraseBkgnd(CDC* pDC) 
+{
+	// TODO: Add your message handler code here and/or call default
+	
+	return CButton::OnEraseBkgnd(pDC);
 }

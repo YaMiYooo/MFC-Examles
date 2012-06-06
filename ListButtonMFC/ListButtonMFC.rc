@@ -74,7 +74,8 @@ IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ListButtonMFC.ico"
 //
 
 IDD_LISTBUTTONMFC_DIALOG DIALOGEX 0, 0, 365, 214
-STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+STYLE WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "ListButtonMFC"
 FONT 9, "宋体"
@@ -82,8 +83,6 @@ BEGIN
     DEFPUSHBUTTON   "确定",IDOK,260,7,50,14
     PUSHBUTTON      "取消",IDCANCEL,260,23,50,14
     LTEXT           "TODO: 在这里设置对话控制。",IDC_STATIC,50,90,200,8
-    PUSHBUTTON      "↑",IDC_BUTTON1,198,7,56,21,NOT WS_VISIBLE
-    PUSHBUTTON      "↓",IDC_BUTTON2,195,189,57,18
 END
 
 IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 187, 96
@@ -165,6 +164,14 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
 #endif    // Chinese (中国) resources
 /////////////////////////////////////////////////////////////////////////////
 

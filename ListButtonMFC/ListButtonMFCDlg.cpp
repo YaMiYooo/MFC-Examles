@@ -19,7 +19,6 @@ CListButtonMFCDlg::CListButtonMFCDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CListButtonMFCDlg::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CListButtonMFCDlg)
-		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -28,7 +27,6 @@ void CListButtonMFCDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CListButtonMFCDlg)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
 	//}}AFX_DATA_MAP
 }
 
@@ -36,8 +34,6 @@ BEGIN_MESSAGE_MAP(CListButtonMFCDlg, CDialog)
 	//{{AFX_MSG_MAP(CListButtonMFCDlg)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDC_BUTTON1, OnButton1)
-	ON_BN_CLICKED(IDC_BUTTON2, OnButton2)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -63,9 +59,6 @@ BOOL CListButtonMFCDlg::OnInitDialog()
 	*/
 	window.Create(NULL,_T("MainWIndow"),WS_VISIBLE|WS_CHILD|WS_BORDER,CRect(0,0,400,window.m_nFrameHeight),this,(LONG)&window);
 	window.ShowWindow(SW_SHOW);
-
-
-
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -119,6 +112,7 @@ void CListButtonMFCDlg::OnOK()
 void CListButtonMFCDlg::OnButton1() 
 {
 	//GetDlgItem(IDC_BUTTON2)->ShowWindow(SW_HIDE);
+	/*
 	CRect rect;
 	CRect client_rect;
 	window.GetWindowRect(rect);
@@ -131,11 +125,13 @@ void CListButtonMFCDlg::OnButton1()
 	GetDlgItem(IDC_BUTTON1)->ShowWindow(SW_HIDE);
 	GetDlgItem(IDC_BUTTON2)->ShowWindow(SW_SHOW);
 	Invalidate(TRUE);
+	*/
 }
 
 void CListButtonMFCDlg::OnButton2() 
 {
 	// TODO: Add your control notification handler code here
+	/*
 	CRect rect,client_rect;
 	window.GetWindowRect(rect);
 	this->GetWindowRect(client_rect);
@@ -148,5 +144,6 @@ void CListButtonMFCDlg::OnButton2()
 	Invalidate(TRUE);
 	GetDlgItem(IDC_BUTTON1)->ShowWindow(SW_SHOW);
 	GetDlgItem(IDC_BUTTON2)->ShowWindow(SW_HIDE);
+	*/
 
 }

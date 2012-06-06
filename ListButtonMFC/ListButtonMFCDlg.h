@@ -11,6 +11,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // CListButtonMFCDlg dialog
 #include "MainWindow.h"
+#include "PButton.h"
 
 class CListButtonMFCDlg : public CDialog
 {
@@ -24,7 +25,6 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CListButtonMFCDlg)
 	enum { IDD = IDD_LISTBUTTONMFC_DIALOG };
-		// NOTE: the ClassWizard will add data members here
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides

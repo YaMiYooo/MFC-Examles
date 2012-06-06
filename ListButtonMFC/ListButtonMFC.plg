@@ -6,33 +6,27 @@
 --------------------Configuration: ListButtonMFC - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEFFA.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPED1E.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ListButtonMFC.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"F:\workspace\MFC\ListButtonMFC\ListButtonMFC.cpp"
-"F:\workspace\MFC\ListButtonMFC\ListButtonMFCDlg.cpp"
 "F:\workspace\MFC\ListButtonMFC\MainWindow.cpp"
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEFFA.tmp" 
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEFFB.tmp" with contents
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPED1E.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPED1F.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/ListButtonMFC.pdb" /debug /machine:I386 /out:"Debug/ListButtonMFC.exe" /pdbtype:sept 
 .\Debug\ListButtonMFC.obj
 .\Debug\ListButtonMFCDlg.obj
 .\Debug\MainWindow.obj
+.\Debug\PButton.obj
 .\Debug\SButton.obj
 .\Debug\StdAfx.obj
 .\Debug\ListButtonMFC.res
 ]
-Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEFFB.tmp"
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPED1F.tmp"
 <h3>Output Window</h3>
 Compiling...
-ListButtonMFC.cpp
-Generating Code...
-Compiling...
-ListButtonMFCDlg.cpp
 MainWindow.cpp
-Generating Code...
 Linking...
 
 
