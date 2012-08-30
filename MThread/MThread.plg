@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MThread - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MThread.res" /d "_DEBUG" /d "_AFXDLL" "F:\workspace\MFC\MThread\MThread.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA1FF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MThread.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\workspace\MFC\MThread\FsckDialog.cpp"
+"F:\workspace\MFC\MThread\MThread.cpp"
+"F:\workspace\MFC\MThread\MThreadDlg.cpp"
+"F:\workspace\MFC\MThread\DialogThread.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA1FF.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA210.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MThread.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\workspace\MFC\MThread\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA210.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA211.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MThread.pdb" /debug /machine:I386 /out:"Debug/MThread.exe" /pdbtype:sept 
+.\Debug\FsckDialog.obj
+.\Debug\MThread.obj
+.\Debug\MThreadDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\MThread.res
+.\Debug\DialogThread.obj
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA211.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+FsckDialog.cpp
+MThread.cpp
+MThreadDlg.cpp
+DialogThread.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MThread.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

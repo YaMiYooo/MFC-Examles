@@ -14,9 +14,9 @@ Class2=CTestMFCDlg
 ResourceCount=4
 Resource1=IDR_MAINFRAME
 Class3=dialog
-Resource2=IDD_DIALOG1
+Resource2=IDD_TESTMFC_DIALOG
 Class4=SButton
-Resource3=IDD_TESTMFC_DIALOG
+Resource3=IDD_DIALOG1
 Resource4=IDR_MENU1
 
 [CLS:CTestMFCApp]
